@@ -1,0 +1,33 @@
+HTML::Template::Compiled::Filter::Whitespace version 0.01
+=========================================================
+
+Whitespace filter for HTML output.
+Use this filter standallone or as template filter in combination with HTML::Template::Compiled.
+
+INSTALLATION
+
+To install this module type the following:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+    Perl6::Export::Attrs
+
+COPYRIGHT AND LICENCE
+
+Copyright (c) 2007,
+Steffen Winkler
+steffenw@cpan.org,
+Volker Voit
+volker.voit@googlemail.com.
+All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it
+under the same terms as Perl itself.

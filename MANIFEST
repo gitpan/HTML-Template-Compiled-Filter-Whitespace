@@ -1,0 +1,11 @@
+Build.PL
+Changes
+lib/HTML/Template/Compiled/Filter/Whitespace.pm
+MANIFEST			This list of files
+README
+t/01_output_filter.t
+t/02_template_filter.t
+t/98_pod.t
+t/99_pod_coverage.t
+Makefile.PL
+META.yml
