@@ -2,3 +2,6 @@ Revision history for Perl extension HTML::Template::Compiled::Filter::Whitespace
 
 0.01  Sun Nov 25 23:00:00 2007
 - fist version
+
+0.02  Mon Nov 26 23:00:00 2007
+- add HTML::Template::Compiled to build_requires
