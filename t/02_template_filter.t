@@ -2,10 +2,14 @@
 
 use strict;
 use warnings;
-use Test::More tests => 3;
+
+use Test::More;
 
 BEGIN {
-    use_ok('HTML::Template::Compiled');
+    my ($module, $version) = qw(HTML::Template::Compiled 0.84);
+    eval "use $module $version";
+    $@ ? plan skip_all => "$module $version required for testing template filter"
+       : plan tests => 2;
     use_ok('HTML::Template::Compiled::Filter::Whitespace', 'get_whitespace_filter');
 }
 
@@ -21,5 +25,5 @@ my $clean_html = <<'EOT';
 <html>
 </html>
 EOT
-$htc->param(dummy => 0);
+$htc->param();
 is $htc->output(), $clean_html, 'filtered';

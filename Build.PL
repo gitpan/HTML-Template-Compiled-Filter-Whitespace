@@ -12,8 +12,7 @@ my $build = Module::Build->new(
         'Perl6::Export::Attrs' => '0',
     },
     build_requires => {
-        'Test::More'               => '0',
-        'HTML::Template::Compiled' => '0.84',
+        'Test::More' => '0',
     },
     create_makefile_pl   => 'traditional',
     recursive_test_files => 1,

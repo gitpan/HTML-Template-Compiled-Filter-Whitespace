@@ -3,7 +3,7 @@ package HTML::Template::Compiled::Filter::Whitespace;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Perl6::Export::Attrs;
 
@@ -65,6 +65,8 @@ HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output
 0.01
 
 =head1 SYNOPSIS
+
+    use HTML::Template::Compiled::Filter::Whitespace;
 
 To clean a string you can pass a scalar to the function whitespace_filter().
 

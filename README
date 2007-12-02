@@ -1,4 +1,4 @@
-HTML::Template::Compiled::Filter::Whitespace version 0.02
+HTML::Template::Compiled::Filter::Whitespace version 0.03
 =========================================================
 
 Whitespace filter for HTML output.
@@ -6,7 +6,14 @@ Use this filter standallone or as template filter in combination with HTML::Temp
 
 INSTALLATION
 
-To install this module type the following:
+To install this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+Alternatively, to install with Module::Build, you can use the following commands:
 
     perl Build.PL
     ./Build
