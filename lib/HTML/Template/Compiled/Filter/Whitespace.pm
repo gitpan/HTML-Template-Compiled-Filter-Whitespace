@@ -3,7 +3,7 @@ package HTML::Template::Compiled::Filter::Whitespace;
 use strict;
 use warnings;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Perl6::Export::Attrs;
 
@@ -62,18 +62,21 @@ HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output
 
 =head1 VERSION
 
-0.01
+0.04
 
 =head1 SYNOPSIS
 
-    use HTML::Template::Compiled::Filter::Whitespace;
 
 To clean a string you can pass a scalar to the function whitespace_filter().
+
+    use HTML::Template::Compiled::Filter::Whitespace qw(whitespace_filter);
 
     my $clean_html = whitespace_filter($unclean_html);
 
 If you are using HTML::Template::Compiled and want to clean the Template before
 parsing you can use the function get_whitespace_filter:
+
+    use HTML::Template::Compiled::Filter::Whitespace qw(get_whitespace_filter);
 
     my $htc = HTML::Template::Compiled->new(
         tagstyle  => [qw(-classic -comment +asp)],
@@ -84,6 +87,8 @@ parsing you can use the function get_whitespace_filter:
 If you are using HTML::Template::Compiled and want to clean the output
 do both or only this:
 
+    use HTML::Template::Compiled::Filter::Whitespace qw(whitespace_filter);
+
     my $clean_html = whitespace_filter( $htc->output() );
 
 If you want to disable the filter set the global variable DEBUG to something true.
@@ -93,6 +98,8 @@ If you want to disable the filter set the global variable DEBUG to something tru
 =head1 DESCRIPTION
 
 This package provides functions to clean out whitespaces and empty lines.
+
+HTML tags pre, code and textarea will be unchanged.
 
 =head1 SUBROUTINES/METHODS
 
@@ -115,7 +122,7 @@ none
 
 =head1 DEPENDENCIES
 
-none
+L<Perl6::Export::Attrs>
 
 =head1 INCOMPATIBILITIES
 
@@ -127,7 +134,7 @@ not known
 
 =head1 SEE ALSO
 
-L<Perl6::Export::Attrs>
+L<HTML::Template::Compiled>
 
 =head1 AUTHOR
 
