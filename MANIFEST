@@ -1,5 +1,8 @@
 Build.PL
 Changes
+example/01_clean_string.pl
+example/02_clean_template.pl
+example/03_clean_all.pl
 lib/HTML/Template/Compiled/Filter/Whitespace.pm
 MANIFEST			This list of files
 README

@@ -1,21 +1,25 @@
 ---
 name: HTML-Template-Compiled-Filter-Whitespace
-version: 0.04
+version: 0.05
 author:
-  - 'Steffen Winkler - steffenw@cpan.org, Volker Voit - volker.voit@googlemail.com'
-abstract: whitespace filter for HTML output
+  - 'Steffen Winkler <steffenw at cpan.org>, Volker Voit <volker.voit at googlemail.com>'
+abstract: 'HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output'
 license: perl
 resources:
   license: http://dev.perl.org/licenses/
 requires:
   Perl6::Export::Attrs: 0
 build_requires:
+  Test::Simple: 0
+recommends:
   Test::More: 0
+  Test::Pod: 1.14
+  Test::Pod::Coverage: 1.04
 provides:
   HTML::Template::Compiled::Filter::Whitespace:
     file: lib/HTML/Template/Compiled/Filter/Whitespace.pm
-    version: 0.04
-generated_by: Module::Build version 0.2801
+    version: 0.05
+generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

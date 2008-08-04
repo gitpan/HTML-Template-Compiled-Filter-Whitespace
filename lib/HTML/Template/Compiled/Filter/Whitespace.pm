@@ -3,7 +3,7 @@ package HTML::Template::Compiled::Filter::Whitespace;
 use strict;
 use warnings;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Perl6::Export::Attrs;
 
@@ -15,21 +15,24 @@ my $inplace_whitespace_filter = sub {
     return if $DEBUG;
     ${$scalarref} =~ tr{\0}{ };
     my @unclean;
-    while (${$scalarref} =~ s{(
-            < \s* (pre|code|textarea) [^>]* > # opening pre / code tag
-            .*?                      # content
-            < \s* / \2 [^>]* >       # closing tag
-            )}{\0}xmsi) {
+    while (
+        ${$scalarref} =~ s{(
+            < \s* (pre | code | textarea) [^>]* > # opening pre-, code
+                                                  # or textarea tag
+            .*?                                   # content
+            < \s* / \2 [^>]* >                    # closing tag
+            )}{\0}xmsi
+    ) {
         push @unclean, $1;
     }
     ${$scalarref} =~ s{
-        (?: ^ \s*)                   # leading spaces and empty lines
+        (?: ^ \s*)              # leading spaces and empty lines
         |
         (?: [^\S\n]* $)
         |
-        ([^\S\n]* (?: \n | \z))      # spaces at EOL
+        ([^\S\n]* (?: \n | \z)) # spaces at EOL
         |
-        ([^\S\n]{2,})                # spaces between text
+        ([^\S\n]{2,})           # spaces between text
     }{ $1 ? "\n" : $2 ? q{ } : q{} }xmsge;
     for my $unclean (@unclean) {
         ${$scalarref} =~ s{\0}{$unclean}xms;
@@ -62,10 +65,9 @@ HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output
 
 =head1 VERSION
 
-0.04
+0.05
 
 =head1 SYNOPSIS
-
 
 To clean a string you can pass a scalar to the function whitespace_filter().
 
@@ -94,6 +96,11 @@ do both or only this:
 If you want to disable the filter set the global variable DEBUG to something true.
 
   $HTML::Template::Compiled::Filter::Whitespace::DEBUG = 1;
+
+=head1 EXAMPLE
+
+Inside of this Distribution is a directory named example.
+Run this *.pl files.
 
 =head1 DESCRIPTION
 
@@ -142,11 +149,11 @@ Steffen Winkler
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2007,
+Copyright (c) 2007 - 2008,
 Steffen Winkler
-C<< <steffenw@cpan.org> >>,
+C<< <steffenw at cpan.org> >>,
 Volker Voit
-C<< <volker.voit@googlemail.com> >>.
+C<< <volker.voit at googlemail.com> >>.
 All rights reserved.
 
 This module is free software;

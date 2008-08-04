@@ -8,8 +8,8 @@ WriteMakefile
           'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/HTML/Template/Compiled/Filter/Whitespace.pm',
           'PREREQ_PM' => {
-                           'Test::More' => '0',
-                           'Perl6::Export::Attrs' => '0'
+                           'Perl6::Export::Attrs' => 0,
+                           'Test::Simple' => 0
                          }
         )
 ;

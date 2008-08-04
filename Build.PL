@@ -3,22 +3,27 @@ use warnings;
 
 use Module::Build;
 
-my $build = Module::Build->new(
+Module::Build->new(
     module_name       => 'HTML::Template::Compiled::Filter::Whitespace',
     license           => 'perl',
-    dist_author       => 'Steffen Winkler - steffenw@cpan.org, Volker Voit - volker.voit@googlemail.com',
+    dist_abstract     => 'HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output',
+    dist_author       => 'Steffen Winkler <steffenw at cpan.org>, Volker Voit <volker.voit at googlemail.com>',
     dist_version_from => 'lib/HTML/Template/Compiled/Filter/Whitespace.pm',
     requires          => {
-        'Perl6::Export::Attrs' => '0',
+        'Perl6::Export::Attrs' => 0,
     },
     build_requires => {
-        'Test::More' => '0',
+        'Test::Simple' => 0, # for Test::More
+    },
+    recommends => {
+        # build
+        'Test::Pod'           => '1.14',
+        'Test::Pod::Coverage' => '1.04',
+        'Test::More'          => 0,
     },
     create_makefile_pl   => 'traditional',
     recursive_test_files => 1,
-    add_to_cleanup       => [
-        'META.yml', '*.bak', '*.gz', 'Makefile.PL',
-    ],
-);
-
-$build->create_build_script();
+    add_to_cleanup       => [ qw(
+        META.yml *.bak *.gz Makefile.PL
+    ) ],
+)->create_build_script();

@@ -1,4 +1,4 @@
-HTML::Template::Compiled::Filter::Whitespace version 0.04
+HTML::Template::Compiled::Filter::Whitespace version 0.05
 =========================================================
 
 Whitespace filter for HTML output.
@@ -28,11 +28,11 @@ This module requires these other modules and libraries:
 
 COPYRIGHT AND LICENCE
 
-Copyright (c) 2007,
+Copyright (c) 2007 - 2008,
 Steffen Winkler
-steffenw@cpan.org,
+steffenw at cpan.org,
 Volker Voit
-volker.voit@googlemail.com.
+volker.voit at googlemail.com.
 All rights reserved.
 
 This module is free software;
