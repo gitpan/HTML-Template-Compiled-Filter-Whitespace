@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+our $VERSION = 0;
+
 use HTML::Template::Compiled;
 use HTML::Template::Compiled::Filter::Whitespace qw(get_whitespace_filter);
 
@@ -31,7 +33,7 @@ my $htc;
     );
 }
 $htc->param(param => "parameter \n \n         param");
-print "Filter swichted temporary off.\n",
+() = print "Filter swichted temporary off.\n",
       "------------------------------\n",
       $htc->output(),
       "\n";
@@ -43,7 +45,9 @@ $htc = HTML::Template::Compiled->new(
 );
 
 $htc->param(param => "parameter \n \n         param");
-print "filtered\n",
+() = print "filtered\n",
       "--------\n",
       $htc->output(),
       "\n";
+
+# $Id$

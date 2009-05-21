@@ -13,7 +13,8 @@ Module::Build->new(
         'Perl6::Export::Attrs' => 0,
     },
     build_requires => {
-        'Test::Simple' => 0, # for Test::More
+        'Test::Simple'     => 0, # for Test::More
+        'Test::NoWarnings' => 0,
     },
     recommends => {
         # build

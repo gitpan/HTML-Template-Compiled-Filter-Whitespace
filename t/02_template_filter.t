@@ -4,12 +4,13 @@ use strict;
 use warnings;
 
 use Test::More;
+use Test::NoWarnings;
 
 BEGIN {
     my ($module, $version) = qw(HTML::Template::Compiled 0.84);
     eval "use $module $version";
     $@ ? plan skip_all => "$module $version required for testing template filter"
-       : plan tests => 2;
+       : plan tests => 2 + 1;
     use_ok('HTML::Template::Compiled::Filter::Whitespace', 'get_whitespace_filter');
 }
 

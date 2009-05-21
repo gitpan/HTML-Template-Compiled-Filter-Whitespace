@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+our $VERSION = 0;
+
 use HTML::Template::Compiled;
 use HTML::Template::Compiled::Filter::Whitespace qw(whitespace_filter);
 
@@ -26,4 +28,6 @@ my $htc = HTML::Template::Compiled->new(
     scalarref => \$template,
 );
 $htc->param(param => "parameter \n \n         param");
-print whitespace_filter( $htc->output() );
+() = print whitespace_filter( $htc->output() );
+
+# $Id$
