@@ -3,7 +3,7 @@ package HTML::Template::Compiled::Filter::Whitespace;
 use strict;
 use warnings;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use Perl6::Export::Attrs;
 
@@ -67,7 +67,7 @@ HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output
 
 =head1 VERSION
 
-0.06
+0.07
 
 =head1 SYNOPSIS
 

@@ -1,6 +1,6 @@
 ---
 name: HTML-Template-Compiled-Filter-Whitespace
-version: 0.06
+version: 0.07
 author:
   - 'Steffen Winkler <steffenw at cpan.org>, Volker Voit <volker.voit at googlemail.com>'
 abstract: 'HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output'
@@ -9,6 +9,7 @@ resources:
   license: http://dev.perl.org/licenses/
 requires:
   Perl6::Export::Attrs: 0
+  perl: 5.006001
 build_requires:
   Test::NoWarnings: 0
   Test::Simple: 0
@@ -19,7 +20,7 @@ recommends:
 provides:
   HTML::Template::Compiled::Filter::Whitespace:
     file: lib/HTML/Template/Compiled/Filter/Whitespace.pm
-    version: 0.06
+    version: 0.07
 generated_by: Module::Build version 0.33
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html

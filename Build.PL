@@ -10,9 +10,11 @@ Module::Build->new(
     dist_author       => 'Steffen Winkler <steffenw at cpan.org>, Volker Voit <volker.voit at googlemail.com>',
     dist_version_from => 'lib/HTML/Template/Compiled/Filter/Whitespace.pm',
     requires          => {
+        perl                   => 5.006001,
         'Perl6::Export::Attrs' => 0,
     },
     build_requires => {
+        # Cwd              => 0, # perl dist
         'Test::Simple'     => 0, # for Test::More
         'Test::NoWarnings' => 0,
     },
