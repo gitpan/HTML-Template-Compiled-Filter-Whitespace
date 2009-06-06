@@ -1,4 +1,4 @@
-HTML::Template::Compiled::Filter::Whitespace version 0.07
+HTML::Template::Compiled::Filter::Whitespace version 0.08
 =========================================================
 
 Whitespace filter for HTML output.

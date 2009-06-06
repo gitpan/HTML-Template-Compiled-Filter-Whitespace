@@ -3,7 +3,7 @@ package HTML::Template::Compiled::Filter::Whitespace;
 use strict;
 use warnings;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use Perl6::Export::Attrs;
 
@@ -67,7 +67,7 @@ HTML::Template::Compiled::Filter::Whitespace - whitespace filter for HTML output
 
 =head1 VERSION
 
-0.07
+0.08
 
 =head1 SYNOPSIS
 
@@ -97,7 +97,7 @@ do both or only this:
 
 If you want to disable the filter set the global variable DEBUG to something true.
 
-  $HTML::Template::Compiled::Filter::Whitespace::DEBUG = 1;
+    $HTML::Template::Compiled::Filter::Whitespace::DEBUG = 1;
 
 =head1 EXAMPLE
 
@@ -151,7 +151,7 @@ Steffen Winkler
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2007 - 2008,
+Copyright (c) 2007 - 2009,
 Steffen Winkler
 C<< <steffenw at cpan.org> >>,
 Volker Voit

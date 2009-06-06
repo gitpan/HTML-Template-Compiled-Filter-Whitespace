@@ -14,9 +14,10 @@ Module::Build->new(
         'Perl6::Export::Attrs' => 0,
     },
     build_requires => {
-        # Cwd              => 0, # perl dist
-        'Test::Simple'     => 0, # for Test::More
-        'Test::NoWarnings' => 0,
+        # Cwd                      => 0, # perl dist
+        'Test::Simple'             => 0, # for Test::More
+        'Test::NoWarnings'         => 0,
+        'HTML::Template::Compiled' => '0.84',
     },
     recommends => {
         # build

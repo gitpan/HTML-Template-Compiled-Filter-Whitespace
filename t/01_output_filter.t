@@ -12,11 +12,30 @@ BEGIN {
 
 my $unclean_html = <<'EOT';
 <html>
+ <body>
 
+<pre>
+ xxx
+
+</pre>
+
+ </body>
 </html>
 EOT
+
 my $clean_html = <<'EOT';
 <html>
+<body>
+<pre>
+ xxx
+
+</pre>
+</body>
 </html>
 EOT
-is whitespace_filter($unclean_html), $clean_html, 'filtered';
+
+is(
+    whitespace_filter($unclean_html),
+    $clean_html,
+    'filtered',
+);
